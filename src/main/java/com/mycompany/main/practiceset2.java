@@ -25,7 +25,7 @@ public class practiceset2 {
                 System.out.println("number is negative");
             }
             
-            // get a number from users and check the number is negative or even or odd
+            // get a number from users and check the number is or even or odd
             System.out.print("Enter a number = ");
             int num1 = scann.nextInt();
             if(num1%2==0){
