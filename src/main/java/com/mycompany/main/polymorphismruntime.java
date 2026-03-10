@@ -18,7 +18,8 @@ class man {
 }
 
 class woman extends man {
-
+    
+    @Override
     void show() {
         System.out.println("Class woman");
     }
@@ -29,9 +30,10 @@ class woman extends man {
 public class polymorphismruntime {
 
     public static void main(String[] args) {
-
-        woman obj = new woman();   // parent reference, child object
+        man obj = new man();
         obj.show();
+        woman obj1 = new woman();   // parent reference, child object
+        obj1.show();
 
     }
 }
