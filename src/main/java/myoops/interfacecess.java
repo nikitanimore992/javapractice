@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.main;
+package myoops;
 
 /**
  *
@@ -23,20 +23,31 @@ interface C{
         int number = 20;// variables are static final 
         String name = "Nikita";
     void showMethod();
-    void outputDisplay(); // public abstract class 
+    void outputDisplay(); // public ,  abstract class 
+    default void nameDisplay(){ // kisi bhi methods ko interface me agar ham defalut defaine kar de to usko implementation ho sakta he 
+            System.out.println("this defalut method in interface");
+    }
     
 }
 
-interface E{ 
+interface E extends C{ 
         void add();
 }
 
 class D implements C,E{
+    @Override
     public void showMethod(){
         System.out.println("show methods");
     }
+    @Override
     public void outputDisplay(){
         System.out.println("Display method call");
+    }
+    
+    
+    @Override
+    public void add(){
+    
     }
 }
 public class interfacecess {
