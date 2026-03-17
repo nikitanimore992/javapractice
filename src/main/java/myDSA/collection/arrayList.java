@@ -12,8 +12,9 @@ import java.util.*;
  */
 public class arrayList {
     public static void main(String[] args) {
-            ArrayList<String> list = new ArrayList<>();
-            
+//            ArrayList<String> list = new ArrayList<>();
+              List<String> list = new ArrayList<>();
+
             // add element in array list
             list.add("Nikky");
             list.add("Neha");
@@ -43,10 +44,25 @@ public class arrayList {
             //  list.clear();
             //  System.out.println("this is list = "+list);
             
-            // get all elemet one by one 
+            // get all elemet one by one using loop and get method  
+            System.out.println("size of arraylist is = "+ list.size());
             for(int i =0; i<list.size(); i++){
-                System.out.println(list.get(i));
+                System.out.println("using for loop "+list.get(i));
             }
             
+            // get all elements using for each loop 
+            for(String element:list){
+                System.out.println("using for each loop = "+element );
+            }
+            
+            
+            // get all elements from arraylist using Iterator
+            // create a object of Iterator
+            
+            Iterator<String> it = list.iterator();
+            
+            while(it.hasNext()){
+                System.out.println("iterator "+it.next());
+            }
     }
 }
