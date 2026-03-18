@@ -8,7 +8,7 @@ package myDSA.collection;
  *
  * @author pramo
  */
-public class Student {
+public class Student implements Comparable<Student>{ // ye comparable he iske andar ek unimplemented method hota he 
     // apke pass kabhi ise stuation aa sakti he ki like apko esa set banana ho jo primitive type ka na ho 
     // ek custom class ka apko set bana he 
     // wo natually ap nahi bana sakte 
@@ -51,6 +51,13 @@ public class Student {
         }
         final Student other = (Student) obj;
         return this.Rollno == other.Rollno;
+    }
+
+    @Override
+    public int compareTo(Student that) {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//         return 0;
+        return this.Rollno - that.Rollno; /// yaha ham ise roll wise sort kar rahe he 
     }
     
     
