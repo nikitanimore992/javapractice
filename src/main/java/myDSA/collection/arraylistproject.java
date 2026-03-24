@@ -44,7 +44,7 @@ public class arraylistproject {
                 break;
                 
             case 2: 
-                if(tasks.size()==0){
+                if(tasks.isEmpty()){
                     System.out.println("List is Empty");
                 }else{
                 System.out.println("your Tasks");
