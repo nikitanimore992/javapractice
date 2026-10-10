@@ -13,8 +13,9 @@ public class reverseString {
         rstr = rstr + str.charAt(i);
         }
         System.out.println("Reverse String is : "+ rstr);
+        System.out.println("Actual String is : "+str);
     }
-    void usingSwap(char[] str){
+    void usingSwap(char[] str){ 
         int start = 0;
         int end= str.length-1;
         while(start<end){
@@ -24,11 +25,13 @@ public class reverseString {
         start++;
         end--;
         }
-            System.out.println(str);     
+            System.out.println(str);   
+            
     }
     void usingReverse(String str){
         String reverse = new StringBuilder(str).reverse().toString();
         System.out.println(reverse);
+        System.out.println(str);
     }
     
     public static void main(String[] args) {
